@@ -47,6 +47,7 @@ a {
     flex-direction: column;
     align-items: center;
     width: 16%;
+    cursor: pointer;
 }
 
 .card img {
@@ -90,6 +91,7 @@ main {
     height: calc(100vh - 8rem);
     background-color: #000000;
     width: 15rem;
+    overflow: hidden;
 }
 
 .side-bar div {
@@ -100,9 +102,17 @@ main {
     margin: .3rem 0;
 }
 
+.logo-hidden {
+    display: none;
+}
+
 .nav-icon {
     font-size: 20px;
     width: 15px;
+}
+
+.add-playlist {
+    cursor: pointer;
 }
 
 .add {
@@ -136,6 +146,10 @@ main {
     background-color: #080b12;
 }
 
+.upgrade a {
+    margin-right: 2rem;
+}
+
 .nav-content {
     padding: 1rem 4rem;
     color: grey;
@@ -146,6 +160,7 @@ main {
 }
 
 .content {
+    color: grey;
     padding-bottom: .3rem;
     border-bottom: 2px solid greenyellow;
 }
@@ -240,8 +255,8 @@ footer i {
 
 .time {
     margin-top: .5rem;
-    justify-content: center;
     font-size: 12px;
+    width: 80%;
 }
 
 .grey-line {
@@ -259,6 +274,8 @@ footer i {
     background-color: rgb(255, 255, 255);
     border-radius: 1rem;
 }
+
+/* test change range bar for chorme and firefox */
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     input[type='range'] {
@@ -289,4 +306,219 @@ footer i {
 input[type='range']:hover::-webkit-slider-thumb {
     background: rgba(255, 255, 255);
     box-shadow: -80px 0 0 80px #46fb2e;
+}
+
+input[type="range"]::-moz-range-progress {
+    background-color: #5bf743;
+}
+
+input[type="range"]::-moz-range-track {
+    background-color: grey;
+}
+
+@-moz-document url-prefix() {
+    input[type="range"] {
+        background-color: #282828;
+    }
+}
+
+/* end test */
+
+/* media queries */
+
+@media screen and (max-width: 1100px) {
+
+    .nav-content {
+        flex-wrap: wrap;
+    }
+
+    .cards-history {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: .5rem;
+    }
+
+    .card {
+        min-width: 179px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .cards-history {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .cards-builded {
+        justify-content: space-evenly;
+    }
+
+    .cards-artists {
+        justify-content: space-evenly;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .card {
+        min-width: 179px;
+    }
+
+    .like-folder {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .song h4 {
+        font-size: 12px;
+    }
+
+    .song p {
+        font-size: 10px;
+    }
+
+    .left *,
+    .right * {
+        gap: .2rem;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .description {
+        display: none;
+    }
+
+    .playlist {
+        display: none;
+    }
+
+    #user {
+        display: none;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .logo-hidden {
+        display: block;
+    }
+
+    .side-bar {
+        width: 3rem;
+    }
+
+    .side-main {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .footer-side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .song-img {
+        display: none;
+    }
+
+    .card {
+        min-width: 50px;
+    }
+
+    input[type='range'] {
+        display: none;
+    }
+}
+
+/* hover effects */
+
+.upgrade a:hover {
+    transition: .5s;
+    transform: scale(1.2);
+}
+
+.hover-card {
+    position: relative;
+}
+
+.card i {
+    display: none;
+    position: absolute;
+    left: calc(50% - (25.6px / 2));
+    top: calc(50% - 34.4px / 2);
+}
+
+.card:hover img {
+    transition: .5s;
+    filter: brightness(.5);
+}
+
+.card:hover i {
+    display: block;
+}
+
+.content:hover {
+    cursor: pointer;
+    color: white;
+
+}
+
+.content {
+    position: relative;
+}
+
+.left-animation {
+    position: absolute;
+    top: 90%;
+    width: 50%;
+    height: 5px;
+    background-color: #141922;
+}
+
+.right-animation {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    width: 50%;
+    height: 5px;
+    background-color: #141922;
+}
+
+.content:hover .left-animation {
+    transition: .5s;
+    transform: translateX(-100%);
+}
+
+.content:hover .right-animation {
+    transition: .5s;
+    transform: translateX(100%);
+}
+
+.description:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.playlist div:hover {
+    cursor: pointer;
+    color: white;
+}
+
+footer i:hover {
+    transform: scale(1.2);
+    transition: .5s;
+    color: white;
+    cursor: pointer;
 }

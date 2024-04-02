@@ -25,6 +25,9 @@
                     <div class="logo">
                         <img width="70%" src="./img/logo.svg" alt="">
                     </div>
+                    <div class="logo-hidden">
+                        <img width="25px" src="./img/logo-small.svg" alt="">
+                    </div>
                     <div class="flex gap align-center">
                         <i class="fa-solid fa-house nav-icon"></i>
                         <div class="description">Home</div>
@@ -40,7 +43,7 @@
                 </nav>
                 <div class="playlist">
                     <h3>PLAYLIST</h3>
-                    <div class="flex align-center gap">
+                    <div class="add-playlist flex align-center gap">
                         <i class="fa-solid fa-plus add"></i>
                         <div class="description"> Crea Playlist</div>
                     </div>
@@ -72,43 +75,79 @@
                 <a href="" class="button">EFFETTUA L'UPGRADE</a>
             </div>
             <div class="nav-content flex space-between">
-                <div class="content">IN EVIDENZA</div>
-                <div class="content">PODCAST</div>
-                <div class="content">CLASSIFICHE</div>
-                <div class="content">GENERI E MOOD</div>
-                <div class="content">NUOVE USCITE</div>
-                <div class="content">SCOPRI</div>
+                <div class="content">IN EVIDENZA
+                    <div class="left-animation"></div>
+                    <div class="right-animation"></div>
+                </div>
+                <div class="content">PODCAST
+                    <div class="left-animation"></div>
+                    <div class="right-animation"></div>
+                </div>
+                <div class="content">CLASSIFICHE
+                    <div class="left-animation"></div>
+                    <div class="right-animation"></div>
+                </div>
+                <div class="content">GENERI E MOOD
+                    <div class="left-animation"></div>
+                    <div class="right-animation"></div>
+                </div>
+                <div class="content">NUOVE USCITE
+                    <div class="left-animation"></div>
+                    <div class="right-animation"></div>
+                </div>
+                <div class="content">SCOPRI
+                    <div class="left-animation"></div>
+                    <div class="right-animation"></div>
+                </div>
             </div>
             <div class="history padding">
                 <h2>Recently played</h2>
                 <div class="cards-history">
                     <div class="card">
-                        <img src="./img/metal_lifting.jpg" alt="">
+                        <div class="hover-card">
+                            <img src="./img/metal_lifting.jpg" alt="">
+                            <i class="fa-solid fa-play circled"></i>
+                        </div>
                         <h4>Heavy Metal</h4>
                         <p>Subtitle</p>
                     </div>
                     <div class="card">
-                        <img src="./img/stranger.jpeg" alt="">
+                        <div class="hover-card">
+                            <img src="./img/stranger.jpeg" alt="">
+                            <i class="fa-solid fa-play circled"></i>
+                        </div>
                         <h4>Stranger things, Vol. 1 (a Netflix Original Series Soundtrack)</h4>
                         <p>Kyle Dixon & Michael Stein</p>
                     </div>
                     <div class="card">
-                        <img src="./img/aquietplace.jpeg" alt="">
+                        <div class="hover-card">
+                            <img src="./img/aquietplace.jpeg" alt="">
+                            <i class="fa-solid fa-play circled"></i>
+                        </div>
                         <h4> A quiet place</h4>
                         <p>Subtitle</p>
                     </div>
                     <div class="card">
-                        <img src="./img/split.jpeg" alt="">
+                        <div class="hover-card">
+                            <img src="./img/split.jpeg" alt="">
+                            <i class="fa-solid fa-play circled"></i>
+                        </div>
                         <h4>Split</h4>
                         <p>Subtitle</p>
                     </div>
                     <div class="card">
-                        <img src="./img/cure.jpeg" alt="">
+                        <div class="hover-card">
+                            <img src="./img/cure.jpeg" alt="">
+                            <i class="fa-solid fa-play circled"></i>
+                        </div>
                         <h4>A cure for wellness</h4>
                         <p>Subtitle</p>
                     </div>
                     <div class="card">
-                        <img src="./img/sinister.jpeg" alt="">
+                        <div class="hover-card">
+                            <img src="./img/sinister.jpeg" alt="">
+                            <i class="fa-solid fa-play circled"></i>
+                        </div>
                         <h4>Sinister</h4>
                         <p>Subtitle</p>
                     </div>
@@ -159,12 +198,12 @@
                     <h4>Sinister</h4>
                     <p>Brano Nome</p>
                 </div>
-                <div class="flex gap">
+                <div class="like-folder flex gap">
                     <i class="fa-regular fa-heart"></i>
                     <i class="fa-regular fa-folder"></i>
                 </div>
             </div>
-            <div class="center column space-between">
+            <div class="center flex column space-between align-center">
                 <div class="command flex gap align-center">
                     <i class="fa-solid fa-shuffle"></i>
                     <i class="fa-solid fa-backward-step"></i>
