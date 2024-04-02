@@ -3,6 +3,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
 }
 
 .flex {
@@ -26,7 +30,7 @@
 }
 
 .gap {
-    gap: 1rem;
+    gap: .7rem;
 }
 
 a {
@@ -36,6 +40,17 @@ a {
 
 .padding {
     padding: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 16%;
+}
+
+.card img {
+    width: 100%;
 }
 
 h2 {
@@ -54,6 +69,7 @@ h4 {
 p {
     color: grey;
     font-size: 12px;
+    font-weight: bold;
 }
 
 .button {
@@ -69,10 +85,19 @@ main {
 
 /* side bar style */
 .side-bar {
-    color: white;
-    height: 100vh;
+    padding: 0 .5rem;
+    color: grey;
+    height: calc(100vh - 8rem);
     background-color: #000000;
-    width: 10rem;
+    width: 15rem;
+}
+
+.side-bar div {
+    color: grey;
+}
+
+.side-bar * {
+    margin: .3rem 0;
 }
 
 .nav-icon {
@@ -94,10 +119,15 @@ main {
     overflow: hidden;
 }
 
+#user {
+    color: white;
+    font-weight: bold;
+}
+
 /* principal style */
 .principal {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 8rem);
     overflow-y: scroll;
 }
 
@@ -107,13 +137,21 @@ main {
 }
 
 .nav-content {
+    padding: 1rem 4rem;
     color: grey;
-    padding: 1rem 8rem;
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: bold;
+    justify-content: center;
+    gap: 1rem;
 }
 
-.history {
-    color: white;
+.content {
+    padding-bottom: .3rem;
+    border-bottom: 2px solid greenyellow;
+}
+
+.history p {
+    text-align: center;
 }
 
 .cards-history {
@@ -122,24 +160,10 @@ main {
     padding: 2rem 0 0;
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 16%;
-}
-
-.card img {
-    width: 100%;
-}
-
 .card * {
     margin-bottom: .5rem;
 }
 
-.builded {
-    color: white;
-}
 
 .builded h2 {
     margin-bottom: .5rem;
@@ -149,10 +173,6 @@ main {
     display: flex;
     padding: 2rem 0;
     gap: 7px;
-}
-
-.artists {
-    color: white;
 }
 
 .cards-artists {
@@ -169,5 +189,104 @@ main {
 
 /* footer styles */
 footer {
+    display: flex;
+    align-items: center;
+    height: 8rem;
     background-color: #282828;
+}
+
+.play {
+    width: 100%;
+}
+
+footer i {
+    font-size: 13px;
+}
+
+.left i {
+    color: grey;
+}
+
+.left {
+    width: 20%;
+    /* justify-content: flex-start; */
+}
+
+.right {
+    width: 20%;
+    justify-content: flex-end;
+}
+
+.song-img img {
+    width: 100%;
+    max-width: 5.5rem;
+    min-width: 2rem;
+}
+
+
+.center {
+    flex-basis: 50%;
+}
+
+.command {
+    justify-content: center;
+}
+
+.circled {
+    padding: .2rem .25rem .2rem .35rem;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.time {
+    margin-top: .5rem;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.grey-line {
+    position: relative;
+    height: 5px;
+    width: 100%;
+    background-color: grey;
+    border-radius: 1rem;
+}
+
+.white-line {
+    position: absolute;
+    height: 5px;
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type='range'] {
+        overflow: hidden;
+        max-width: 100px;
+        width: 8vw;
+        -webkit-appearance: none;
+        background-color: grey;
+    }
+
+    input[type='range']::-webkit-slider-runnable-track {
+        height: 5px;
+        -webkit-appearance: none;
+        color: #ffffff;
+        margin-top: -1px;
+    }
+
+    input[type='range']::-webkit-slider-thumb {
+        width: 10px;
+        -webkit-appearance: none;
+        height: 10px;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0);
+        box-shadow: -80px 0 0 80px #ffffff;
+    }
+}
+
+input[type='range']:hover::-webkit-slider-thumb {
+    background: rgba(255, 255, 255);
+    box-shadow: -80px 0 0 80px #46fb2e;
 }
