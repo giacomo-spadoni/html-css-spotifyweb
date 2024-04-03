@@ -46,8 +46,12 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 16%;
+    width: 16.4%;
     cursor: pointer;
+}
+
+.hover-card {
+    width: 100%;
 }
 
 .card img {
@@ -466,6 +470,8 @@ input[type="range"]::-moz-range-track {
 }
 
 .card:hover i {
+    transition: .5s;
+    transform: scale(2);
     display: block;
 }
 
